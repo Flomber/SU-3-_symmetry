@@ -12,9 +12,11 @@ $Λ_c^+ → p π⁺ K⁻$
 
 Identify decays that are related to this reference reaction via SU(3) symmetry. Sketch how the differential decay rates appear in their kinematic phase space.
 
-The decay matrix elements of the Λ_c^+ → p π⁺ K⁻ reaction can be written as:
+The decay matrix elements of the $Λ_c^+ → p π⁺ K⁻$ reaction can be written as:
 
-$𝓜(m_{12}^2, m_{23}^2) = \sum_R g_{\text{prod}}^{(R)} · \mathcal{A}_R(m_{ij}^2) · g_{\text{dec}}^{(R)}$
+$$
+𝓜(m_{12}^2, m_{23}^2) = \sum_R g_{\text{prod}}^{(R)} · \mathcal{A}_R(m_{ij}^2) · g_{\text{dec}}^{(R)}
+$$
 
 Neglect spin effects and consider only dominant resonance contributions.
 
@@ -40,9 +42,9 @@ $$
 
 where:
 
-- $ m_R $: mass of the resonance $ R $
-- $ \Gamma_R $: width of the resonance $ R $
-- $ m_{ij}^2 $: invariant mass of the two-body subsystem $ ij $
+- $m_R$: mass of the resonance $R$
+- $\Gamma_R$: width of the resonance $R$
+- $m_{ij}^2$: invariant mass of the two-body subsystem $ij$
 
 The kinematic space is bounded by the Kibble function:
 
@@ -62,9 +64,9 @@ $$
 m_{31}^2 = m_0^2 + m_1^2 + m_2^2 + m_3^2 - m_{12}^2 - m_{23}^2
 $$
 
-#### Table 1: Resonance Parameters in Λ_c^+ → p K⁻ π⁺ Decays
+#### Table 1: Resonance Parameters in $Λ_c^+ → p K⁻ π⁺$ Decays
 
-| Resonance             | $ m_R $ (GeV)     | $ \Gamma_R $ (GeV)    | $ g_{\text{prod}}^{(R)} $         | $ g_{\text{dec}}^{(R)} $ |
+| Resonance             | $m_R$ (GeV)       | $\Gamma_R$ (GeV)      | $g_{\text{prod}}^{(R)}$           | $g_{\text{dec}}^{(R)}$   |
 |-------------------    |------------------ |-----------------------|-----------------------------------|--------------------------|
 | $K^*(892)$            | 0.896             | 0.047                 | 1.0                               | 1.0                      |
 | $\Lambda^*(1520)$     | 1.518             | 0.015                 | 3.2582 + 1.7589i                  | 1.0                      |
@@ -77,7 +79,7 @@ $$
    **(3 pts)**
 
 2. **Ladder Operators**  
-   Use $ I_{\pm}, U_{\pm}, V_{\pm} $ on the quark states to generate flavor partners for all involved hadrons.  
+   Use $I_{\pm}, U_{\pm}, V_{\pm}$ on the quark states to generate flavor partners for all involved hadrons.  
    - List decay reactions related to the reference one via SU(3) symmetry. **(1 pt)**  
    - List their decay chains. **(1 pt)**
 
