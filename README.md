@@ -144,33 +144,33 @@ outputs/
 
 ### Task 1: SU(3) Multiplet Diagrams
 
-We place all particles involved in the decay Λ_c^+ → p π⁺ K⁻ into their respective SU(3) flavor multiplets based on quark content:
+We place all particles involved in the decay $Λ_c^+ → p π⁺ K⁻$ into their respective SU(3) flavor multiplets based on quark content:
 
-#### 1.1 Baryon Octet (J^P = 1/2⁺)
+#### 1.1 Baryon Octet ($J^P$ = 1/2⁺)
 
 Contains the proton (p) from the final state:
 
 ![Baryon Octet](pictures/multiplets/baryon_octet.png)
 
-#### 1.2 Pseudoscalar Meson Octet (J^P = 0⁻)
+#### 1.2 Pseudoscalar Meson Octet ($J^P$ = 0⁻)
 
 Contains π⁺ and K⁻ from the final state:
 
 ![Meson Octet](pictures/multiplets/meson_octet.png)
 
-#### 1.3 Baryon Decuplet (J^P = 3/2⁺)
+#### 1.3 Baryon Decuplet ($J^P$ = 3/2⁺)
 
 Contains Δ⁰(1232) resonance:
 
 ![Baryon Decuplet](pictures/multiplets/baryon_decuplet.png)
 
-#### 1.4 Vector Meson Nonet (J^P = 1⁻)
+#### 1.4 Vector Meson Nonet ($J^P$ = 1⁻)
 
 Contains K*⁻(892) resonance:
 
 ![Vector Meson Nonet](pictures/multiplets/vector_meson_nonet.png)
 
-#### 1.5 Excited Baryon Resonance (J^P = 3/2⁻)
+#### 1.5 Excited Baryon Resonance ($J^P$ = 3/2⁻)
 
 Contains Λ*(1520) resonance:
 
@@ -178,7 +178,7 @@ Contains Λ*(1520) resonance:
 
 #### 1.6 Charmed Baryons
 
-Contains Λ_c^+ initial state:
+Contains $Λ_c^+$ initial state:
 
 ![Charmed Baryons](pictures/multiplets/charmed_baryons.png)
 
@@ -186,55 +186,55 @@ Contains Λ_c^+ initial state:
 
 ### Task 2: SU(3)-Related Decays via Ladder Operators
 
-Applying SU(3) ladder operators (I±, U±, V±) to the reference decay Λ_c^+ → p π⁺ K⁻, we generate 33 related decay channels:
+Applying SU(3) ladder operators (I±, U±, V±) to the reference decay $Λ_c^+ → p π⁺ K⁻$, we generate 33 related decay channels:
 
 #### ΔS = -3 Decays
 
-1. Λ_c^+ → Ξ⁰ π⁺ K̄⁰
-2. Λ_c^+ → Σ⁺ K̄⁰ K̄⁰
-3. Λ_c^+ → p K̄⁰ K̄⁰
+1. $Λ_c^+ → Ξ⁰ π⁺ K̄⁰$
+2. $Λ_c^+ → Σ⁺ K̄⁰ K̄⁰$
+3. $Λ_c^+ → p K̄⁰ K̄⁰$
 
 #### ΔS = -2 Decays
 
-4. Λ_c^+ → Δ⁺⁺ K̄⁰ K⁻
-5. Λ_c^+ → Λ π⁺ K̄⁰
-6. Λ_c^+ → Ξ⁰ π⁺ φ
-7. Λ_c^+ → Σ⁺ K̄⁰ φ
-8. **Λ_c^+ → Σ⁺ π⁺ K⁻** (with K̄*⁰(892) resonance)
+4. $Λ_c^+ → Δ⁺⁺ K̄⁰ K⁻$
+5. $Λ_c^+ → Λ π⁺ K̄⁰$
+6. $Λ_c^+ → Ξ⁰ π⁺ φ$
+7. $Λ_c^+ → Σ⁺ K̄⁰ φ$
+8. **$Λ_c^+ → Σ⁺ π⁺ K⁻$** (with K̄*⁰(892) resonance)
 
 #### ΔS = -1 Decays
 
-9. **Λ_c^+ → n π⁺ K̄⁰** (with Δ⁺(1232) and Λ*(1520) resonances)
-10. Λ_c^+ → p K̄⁰ φ
-11. **Λ_c^+ → p π⁺ K⁻** (reference decay - with Δ⁺⁺(1232), Λ*(1520), K̄*⁰(892) resonances)
-12. Λ_c^+ → p φ K̄⁰
-13. Λ_c^+ → Δ⁺⁺ K̄⁰ π⁻
-14. Λ_c^+ → Δ⁺⁺ φ K⁻
-15. Λ_c^+ → Λ K⁺ K̄⁰
-16. Λ_c^+ → Λ π⁺ φ
-17. Λ_c^+ → Σ⁺ K⁺ K⁻
-18. Λ_c^+ → Σ⁺ π⁺ π⁻
+9. **$Λ_c^+ → n π⁺ K̄⁰$** (with Δ⁺(1232) and Λ*(1520) resonances)
+10. $Λ_c^+ → p K̄⁰ φ$
+11. **$Λ_c^+ → p π⁺ K⁻$** (reference decay - with Δ⁺⁺(1232), Λ*(1520), K̄*⁰(892) resonances)
+12. $Λ_c^+ → p φ K̄⁰$
+13. $Λ_c^+ → Δ⁺⁺ K̄⁰ π⁻$
+14. $Λ_c^+ → Δ⁺⁺ φ K⁻$
+15. $Λ_c^+ → Λ K⁺ K̄⁰$
+16. $Λ_c^+ → Λ π⁺ φ$
+17. $Λ_c^+ → Σ⁺ K⁺ K⁻$
+18. $Λ_c^+ → Σ⁺ π⁺ π⁻$
 
 #### ΔS = 0 Decays
 
-19. **Λ_c^+ → n K⁺ K̄⁰** (with Λ*(1520) resonance)
-20. **Λ_c^+ → n π⁺ φ** (with Δ⁺(1232) resonance)
-21. Λ_c^+ → p K̄⁰ K⁰
-22. Λ_c^+ → p K⁰ K̄⁰
-23. **Λ_c^+ → p K⁺ K⁻** (with Λ*(1520) resonance)
-24. **Λ_c^+ → p π⁺ π⁻** (with Δ⁺⁺(1232) and Δ⁰(1232) resonances)
-25. Λ_c^+ → p φ φ
-26. Λ_c^+ → Δ⁺⁺ K⁰ K⁻
-27. Λ_c^+ → Λ K⁺ φ
-28. **Λ_c^+ → Λ π⁺ K⁰** (with K*⁺(892) resonance)
-29. **Λ_c^+ → Σ⁺ K⁺ π⁻** (with K*⁰(892) resonance)
+19. **$Λ_c^+ → n K⁺ K̄⁰$** (with Λ*(1520) resonance)
+20. **$Λ_c^+ → n π⁺ φ$** (with Δ⁺(1232) resonance)
+21. $Λ_c^+ → p K̄⁰ K⁰$
+22. $Λ_c^+ → p K⁰ K̄⁰$
+23. **$Λ_c^+ → p K⁺ K⁻$** (with Λ*(1520) resonance)
+24. **$Λ_c^+ → p π⁺ π⁻$** (with Δ⁺⁺(1232) and Δ⁰(1232) resonances)
+25. $Λ_c^+ → p φ φ$
+26. $Λ_c^+ → Δ⁺⁺ K⁰ K⁻$
+27. $Λ_c^+ → Λ K⁺ φ$
+28. **$Λ_c^+ → Λ π⁺ K⁰$** (with K*⁺(892) resonance)
+29. **$Λ_c^+ → Σ⁺ K⁺ π⁻$** (with K*⁰(892) resonance)
 
 #### ΔS = +1 Decays
 
-30. Λ_c^+ → n K⁺ φ
-31. **Λ_c^+ → n π⁺ K⁰** (with Δ⁺(1232) and K*⁺(892) resonances)
-32. Λ_c^+ → p K⁰ φ
-33. Λ_c^+ → p K⁺ π⁻
+30. $Λ_c^+ → n K⁺ φ$
+31. **$Λ_c^+ → n π⁺ K⁰$** (with Δ⁺(1232) and K*⁺(892) resonances)
+32. $Λ_c^+ → p K⁰ φ$
+33. $Λ_c^+ → p K⁺ π⁻$
 
 **Bold entries** indicate decays with identified resonance contributions.
 
@@ -290,27 +290,27 @@ The Dalitz plot intensity is proportional to |M|² where the matrix element M su
 
 #### 4.2 Other Usable SU(3)-Related Decays
 
-**Λ_c^+ → p π⁺ π⁻**
+**$Λ_c^+ → p π⁺ π⁻$**
 
 ![Dalitz Plot p pi pi](pictures/dalitz/dalitz_plot_lambda_c_to_pππ.png)
 
-**Λ_c^+ → p K⁺ K⁻**
+**$Λ_c^+ → p K⁺ K⁻$**
 
 ![Dalitz Plot p K K](pictures/dalitz/dalitz_plot_lambda_c_to_pkk.png)
 
-**Λ_c^+ → n π⁺ K⁰**
+**$Λ_c^+ → n π⁺ K⁰$**
 
 ![Dalitz Plot n pi K](pictures/dalitz/dalitz_plot_lambda_c_to_nπk.png)
 
-**Λ_c^+ → Λ π⁺ K⁰**
+**$Λ_c^+ → Λ π⁺ K⁰$**
 
 ![Dalitz Plot Lambda pi K](pictures/dalitz/dalitz_plot_lambda_c_to_λπk.png)
 
-**Λ_c^+ → Σ⁺ K⁺ π⁻**
+**$Λ_c^+ → Σ⁺ K⁺ π⁻$**
 
 ![Dalitz Plot Sigma K pi](pictures/dalitz/dalitz_plot_lambda_c_to_σkπ.png)
 
-**Λ_c^+ → n π⁺ φ**
+**$Λ_c^+ → n π⁺ φ$**
 
 ![Dalitz Plot n pi phi](pictures/dalitz/dalitz_plot_lambda_c_to_nπφ.png)
 
