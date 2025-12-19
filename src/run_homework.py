@@ -121,10 +121,10 @@ def main(show_plots: bool = False, smooth_dalitz: bool = False, resolution: int 
     print("  ✓ PDG values integrated from mapping_couplings.py")
     print("  ✓ SU(3) CG factors applied in particles.py")
 
-    print("\nTask 4 - Dalitz Plots:")
+    print("\nTask 4 - Dalitz Plots (with marginal distributions):")
     print("  ✓ pictures/dalitz/dalitz_plot_lambda_c_to_p_pi_k.png (reference)")
     print("  ✓ pictures/dalitz/dalitz_plot_lambda_c_to_*.png (all usable decays)")
 
 
 if __name__ == "__main__":
-    main(show_plots=False, smooth_dalitz=False, resolution=100)
+    main(show_plots=False, smooth_dalitz=True, resolution=500)

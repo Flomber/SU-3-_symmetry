@@ -81,18 +81,29 @@ class MultipletPlotter:
         fig, ax = plt.subplots(figsize=self.figsize)
         
         # Baryon octet members to plot (name, highlight)
+        # Exclude Λ and Σ⁰ from this list - they'll be drawn separately at center
         octet_members = [
             ('p', True),   # Final state - HIGHLIGHTED
             ('n', False),
-            ('Λ', False),
             ('Σ⁺', False),
-            ('Σ⁰', False),
             ('Σ⁻', False),
             ('Ξ⁰', False),
             ('Ξ⁻', False),
         ]
         
-        # Draw particles using data from particles module
+        # Draw Λ and Σ⁰ at center (I₃=0, S=-1) with overlapping circles
+        lambda_particle = get_particle('Λ')
+        sigma0_particle = get_particle('Σ⁰')
+        # Draw Λ (larger circle, I=0)
+        self._draw_particle(ax, 0, -1, lambda_particle.name, color='lightskyblue',
+                   quark_content=lambda_particle.quarks, highlight=False, size=0.4,
+                   name_offset=(0, 0.08), quark_offset=(0, 0.0))
+        # Draw Σ⁰ (smaller circle, I=1)
+        self._draw_particle(ax, 0, -1, sigma0_particle.name, color='lightblue',
+                   quark_content=sigma0_particle.quarks, highlight=False, size=0.24,
+                   name_offset=(0, -0.12), quark_offset=(0, -0.26))
+        
+        # Draw remaining particles using data from particles module
         for name, highlight in octet_members:
             particle = get_particle(name)
             color = 'red' if highlight else 'lightblue'
@@ -129,6 +140,16 @@ class MultipletPlotter:
         red_patch = mpatches.Patch(color='red', label='p (Proton) - Final State')
         blue_patch = mpatches.Patch(color='lightblue', label='Other Octet Members')
         ax.legend(handles=[red_patch, blue_patch], loc='upper right', fontsize=11)
+        
+        # Info note about center
+        info_text = (
+            'Center (I₃=0, S=-1):\n'
+            'Λ (I=0) and Σ⁰ (I=1, I₃=0)\n'
+            'shown as overlapping circles'
+        )
+        ax.text(0.02, 0.02, info_text, transform=ax.transAxes,
+                fontsize=8, verticalalignment='bottom',
+                bbox=dict(boxstyle='round', facecolor='lightgray', alpha=0.6))
         
         plt.tight_layout()
         return fig

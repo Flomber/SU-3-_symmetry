@@ -135,8 +135,8 @@ def generate_all_dalitz_plots(resolution=300, smooth=False, show_plots=False):
             daughters_short = "".join([d[0].lower() for d in daughters_names])
             filename = f"pictures/dalitz/dalitz_plot_lambda_c_to_{daughters_short}.png"
             
-            # Generate and plot with specified parameters
-            print(f"  ✓ Generating Dalitz plot...")
+            # Generate Dalitz plot with marginal distributions
+            print(f"  ✓ Generating Dalitz plot with marginal distributions...")
             generator.plot_dalitz(n_points=resolution, save_path=filename, smooth=smooth, show=show_plots)
             print(f"  ✓ Saved to: {filename}")
             

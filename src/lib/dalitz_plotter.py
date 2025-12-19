@@ -379,19 +379,30 @@ class DalitzPlotGenerator:
         
         return m12_sq_grid, m23_sq_grid, intensity_grid
     
-    def plot_dalitz(self, n_points: int = 150, save_path: Optional[str] = None, smooth: bool = False, show: bool = False):
+    def plot_dalitz(self, n_points: int = 150, save_path: Optional[str] = None, smooth: bool = False, show: bool = False, n_bins: int = 60):
         """
-        Generate and display the Dalitz plot with correct physical region.
+        Generate and display the Dalitz plot with marginal distributions.
         
         Args:
             n_points: Number of points per axis (higher = more accurate boundaries)
             save_path: Optional path to save the plot
             smooth: If True, apply smoothing to the intensity grid
             show: If True, display the plot interactively
+            n_bins: Number of bins for marginal distributions
         """
         m12_sq_grid, m23_sq_grid, intensity_grid = self.generate_dalitz_plot(n_points, smooth=smooth)
         
-        fig, ax = plt.subplots(figsize=(12, 10))
+        # Create figure with GridSpec for marginal plots (no colorbar)
+        fig = plt.figure(figsize=(14, 12))
+        gs = fig.add_gridspec(3, 2, width_ratios=[4, 1], height_ratios=[1, 4, 0.5],
+                             hspace=0.05, wspace=0.05)
+        
+        # Main Dalitz plot (left)
+        ax_main = fig.add_subplot(gs[1, 0])
+        
+        # Marginal distribution plots
+        ax_top = fig.add_subplot(gs[0, 0], sharex=ax_main)  # Top: projection onto x-axis
+        ax_right = fig.add_subplot(gs[1, 1], sharey=ax_main)  # Right: projection onto y-axis
         
         # Handle NaN values by masking them
         intensity_masked = np.ma.masked_invalid(intensity_grid)
@@ -400,37 +411,62 @@ class DalitzPlotGenerator:
         vmax = np.nanmax(intensity_grid)
         vmin = vmax * 1e-3
         
-        # Plot with log scale for better visualization
-        im = ax.pcolormesh(m12_sq_grid, m23_sq_grid, intensity_masked, 
-                          shading='auto', cmap='hot',
-                          norm=matplotlib.colors.LogNorm(vmin=vmin, vmax=vmax))
-        
-        cbar = plt.colorbar(im, ax=ax, label='|M|² (Intensity)', pad=0.02)
+        # Plot main Dalitz plot with log scale (no colorbar)
+        im = ax_main.pcolormesh(m12_sq_grid, m23_sq_grid, intensity_masked, 
+                               shading='auto', cmap='magma',
+                               norm=matplotlib.colors.LogNorm(vmin=vmin, vmax=vmax))
         
         # Get axis labels based on chosen pairs
         name_map = {1: self.daughters[0].name, 2: self.daughters[1].name, 3: self.daughters[2].name}
         x_label = f"$m_{{{name_map[self.pair_x[0]]}{name_map[self.pair_x[1]]}}}^2$ (GeV²)"
         y_label = f"$m_{{{name_map[self.pair_y[0]]}{name_map[self.pair_y[1]]}}}^2$ (GeV²)"
         
-        # Add resonance lines (only within physical region)
+        # Add resonance lines
         for resonance in self.resonances:
             mass_sq = resonance.mass**2
             if tuple(sorted(resonance.subsystem)) == self.pair_x:
-                ax.axvline(mass_sq, color='cyan', linestyle='--', linewidth=2.5, alpha=0.8, label=resonance.name)
+                ax_main.axvline(mass_sq, color='cyan', linestyle='--', linewidth=2.5, alpha=0.8, label=resonance.name)
+                ax_top.axvline(mass_sq, color='cyan', linestyle='--', linewidth=2, alpha=0.8)
             elif tuple(sorted(resonance.subsystem)) == self.pair_y:
-                ax.axhline(mass_sq, color='lime', linestyle='--', linewidth=2.5, alpha=0.8, label=resonance.name)
+                ax_main.axhline(mass_sq, color='lime', linestyle='--', linewidth=2.5, alpha=0.8, label=resonance.name)
+                ax_right.axhline(mass_sq, color='lime', linestyle='--', linewidth=2, alpha=0.8)
         
-        # Labels and formatting
-        ax.set_xlabel(x_label, fontsize=14, fontweight='bold')
-        ax.set_ylabel(y_label, fontsize=14, fontweight='bold')
+        # Compute marginal distributions (projections)
+        # X-axis marginal: integrate over y (sum along axis 0)
+        x_marginal = np.nansum(intensity_grid, axis=0)
+        x_coords = m12_sq_grid[0, :]
+        
+        # Y-axis marginal: integrate over x (sum along axis 1)
+        y_marginal = np.nansum(intensity_grid, axis=1)
+        y_coords = m23_sq_grid[:, 0]
+        
+        # Plot marginal distributions
+        ax_top.fill_between(x_coords, 0, x_marginal, alpha=0.6, color='steelblue', step='mid')
+        ax_top.plot(x_coords, x_marginal, color='darkblue', linewidth=1.5)
+        ax_top.set_ylabel('Intensity', fontsize=10)
+        ax_top.tick_params(labelbottom=False)
+        ax_top.grid(True, alpha=0.2, linestyle=':')
+        
+        ax_right.fill_betweenx(y_coords, 0, y_marginal, alpha=0.6, color='coral', step='mid')
+        ax_right.plot(y_marginal, y_coords, color='darkred', linewidth=1.5)
+        ax_right.set_xlabel('Intensity', fontsize=10)
+        ax_right.tick_params(labelleft=False)
+        ax_right.grid(True, alpha=0.2, linestyle=':')
+        
+        # Labels and formatting for main plot
+        ax_main.set_xlabel(x_label, fontsize=14, fontweight='bold')
+        ax_main.set_ylabel(y_label, fontsize=14, fontweight='bold')
+        ax_main.legend(loc='upper right', fontsize=10, framealpha=0.95)
+        ax_main.grid(True, alpha=0.2, linestyle=':')
+        
+        # Title
         daughters_str = " ".join([d.name for d in self.daughters])
-        ax.set_title(f'Dalitz Plot: {self.mother.name} → {daughters_str}\n(with corrected kinematic boundaries)', 
-                fontsize=16, fontweight='bold', pad=20)
+        fig.suptitle(f'Dalitz Plot with Marginal Distributions\n{self.mother.name} → {daughters_str}', 
+                    fontsize=16, fontweight='bold', y=0.98)
         
-        ax.legend(loc='upper right', fontsize=11, framealpha=0.95)
-        ax.grid(True, alpha=0.2, linestyle=':')
-        
-        plt.tight_layout()
+        # Hide unused subplot (top-right corner)
+        ax_corner = fig.add_subplot(gs[0, 1])
+        ax_corner.axis('off')
         
         if save_path:
             print(f"\nSaving plot to: {save_path}")
@@ -506,9 +542,12 @@ def main(resolution=500, smooth=False, show_plots=False):
     generator = DalitzPlotGenerator(mother_particle, daughter_particles, resonances_dynamic,
                                     pair_x=(1, 3), pair_y=(2, 3))
     
-    # Generate and plot with specified parameters
-    generator.plot_dalitz(n_points=resolution, save_path="pictures/dalitz/dalitz_plot_lambda_c_to_p_pi_k.png",
+    # Generate Dalitz plot with marginal distributions
+    print("\n📊 Generating Dalitz plot with marginal distributions...")
+    generator.plot_dalitz(n_points=resolution, 
+                         save_path="pictures/dalitz/dalitz_plot_lambda_c_to_p_pi_k.png",
                          smooth=smooth, show=show_plots)
+    print("   ✓ Plot saved")
     
     print("\n" + "=" * 70)
     print("Dalitz plot generated successfully!")
