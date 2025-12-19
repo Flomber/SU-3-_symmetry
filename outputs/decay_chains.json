@@ -1,0 +1,935 @@
+[
+    {
+        "decay": "Λc⁺ → Ξ⁰ π⁺ K̄⁰",
+        "deltaS": -3,
+        "initial": "Λc⁺",
+        "finals": [
+            "Ξ⁰",
+            "π⁺",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Σ⁺ K̄⁰ K̄⁰",
+        "deltaS": -3,
+        "initial": "Λc⁺",
+        "finals": [
+            "Σ⁺",
+            "K̄⁰",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → p K̄⁰ K̄⁰",
+        "deltaS": -2,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K̄⁰",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Δ⁺⁺ K̄⁰ K⁻",
+        "deltaS": -2,
+        "initial": "Λc⁺",
+        "finals": [
+            "Δ⁺⁺",
+            "K̄⁰",
+            "K⁻"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Λ π⁺ K̄⁰",
+        "deltaS": -2,
+        "initial": "Λc⁺",
+        "finals": [
+            "Λ",
+            "π⁺",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Ξ⁰ π⁺ φ",
+        "deltaS": -2,
+        "initial": "Λc⁺",
+        "finals": [
+            "Ξ⁰",
+            "π⁺",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Σ⁺ K̄⁰ φ",
+        "deltaS": -2,
+        "initial": "Λc⁺",
+        "finals": [
+            "Σ⁺",
+            "K̄⁰",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Σ⁺ π⁺ K⁻",
+        "deltaS": -2,
+        "initial": "Λc⁺",
+        "finals": [
+            "Σ⁺",
+            "π⁺",
+            "K⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "K⁻",
+                    "π⁺"
+                ],
+                "spectator": "Σ⁺",
+                "resonance": {
+                    "name": "K̄*⁰(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "sd̄",
+                    "charge": 0,
+                    "baryon_number": 0,
+                    "strangeness": -1,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "K⁻",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        -1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        -0.21748563170931545,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K̄*⁰(892) Σ⁺",
+                "decay": "K̄*⁰(892) → K⁻ π⁺"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → n π⁺ K̄⁰",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "n",
+            "π⁺",
+            "K̄⁰"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "n",
+                    "π⁺"
+                ],
+                "spectator": "K̄⁰",
+                "resonance": {
+                    "name": "Δ⁺(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "uud",
+                    "charge": 1,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "n",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        0.3842802977207306,
+                        0.6288614602067242
+                    ],
+                    "g_dec": [
+                        0.20840688568279117,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁺(1232) K̄⁰",
+                "decay": "Δ⁺(1232) → n π⁺"
+            },
+            {
+                "subsystem": [
+                    "K̄⁰",
+                    "n"
+                ],
+                "spectator": "π⁺",
+                "resonance": {
+                    "name": "Λ*(1520)",
+                    "mass_GeV": 1.518,
+                    "width_GeV": 0.015,
+                    "quarks": "uds",
+                    "charge": 0,
+                    "baryon_number": 1,
+                    "strangeness": -1,
+                    "isospin3": 0,
+                    "decay_products": [
+                        "K̄⁰",
+                        "n"
+                    ],
+                    "g_prod": [
+                        3.2582,
+                        1.7589
+                    ],
+                    "g_dec": [
+                        0.08413382197428096,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Λ*(1520) π⁺",
+                "decay": "Λ*(1520) → K̄⁰ n"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → p K̄⁰ φ",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K̄⁰",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → p π⁺ K⁻",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "π⁺",
+            "K⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "p",
+                    "π⁺"
+                ],
+                "spectator": "K⁻",
+                "resonance": {
+                    "name": "Δ⁺⁺(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "uuu",
+                    "charge": 2,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": 1.5,
+                    "decay_products": [
+                        "p",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        0.665593,
+                        1.08922
+                    ],
+                    "g_dec": [
+                        0.33393948553592756,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁺⁺(1232) K⁻",
+                "decay": "Δ⁺⁺(1232) → p π⁺"
+            },
+            {
+                "subsystem": [
+                    "K⁻",
+                    "p"
+                ],
+                "spectator": "π⁺",
+                "resonance": {
+                    "name": "Λ*(1520)",
+                    "mass_GeV": 1.518,
+                    "width_GeV": 0.015,
+                    "quarks": "uds",
+                    "charge": 0,
+                    "baryon_number": 1,
+                    "strangeness": -1,
+                    "isospin3": 0,
+                    "decay_products": [
+                        "K⁻",
+                        "p"
+                    ],
+                    "g_prod": [
+                        3.2582,
+                        1.7589
+                    ],
+                    "g_dec": [
+                        0.08413382197428096,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Λ*(1520) π⁺",
+                "decay": "Λ*(1520) → K⁻ p"
+            },
+            {
+                "subsystem": [
+                    "K⁻",
+                    "π⁺"
+                ],
+                "spectator": "p",
+                "resonance": {
+                    "name": "K̄*⁰(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "sd̄",
+                    "charge": 0,
+                    "baryon_number": 0,
+                    "strangeness": -1,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "K⁻",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        -1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        -0.21748563170931545,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K̄*⁰(892) p",
+                "decay": "K̄*⁰(892) → K⁻ π⁺"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → p φ K̄⁰",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "φ",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Δ⁺⁺ K̄⁰ π⁻",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "Δ⁺⁺",
+            "K̄⁰",
+            "π⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "K̄⁰",
+                    "π⁻"
+                ],
+                "spectator": "Δ⁺⁺",
+                "resonance": {
+                    "name": "K*⁻(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "sū",
+                    "charge": -1,
+                    "baryon_number": 0,
+                    "strangeness": -1,
+                    "isospin3": -0.5,
+                    "decay_products": [
+                        "K̄⁰",
+                        "π⁻"
+                    ],
+                    "g_prod": [
+                        1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        0.22671568097509268,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K*⁻(892) Δ⁺⁺",
+                "decay": "K*⁻(892) → K̄⁰ π⁻"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → Δ⁺⁺ φ K⁻",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "Δ⁺⁺",
+            "φ",
+            "K⁻"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Λ K⁺ K̄⁰",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "Λ",
+            "K⁺",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Λ π⁺ φ",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "Λ",
+            "π⁺",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Σ⁺ K⁺ K⁻",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "Σ⁺",
+            "K⁺",
+            "K⁻"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Σ⁺ π⁺ π⁻",
+        "deltaS": -1,
+        "initial": "Λc⁺",
+        "finals": [
+            "Σ⁺",
+            "π⁺",
+            "π⁻"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → n K⁺ K̄⁰",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "n",
+            "K⁺",
+            "K̄⁰"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "K̄⁰",
+                    "n"
+                ],
+                "spectator": "K⁺",
+                "resonance": {
+                    "name": "Λ*(1520)",
+                    "mass_GeV": 1.518,
+                    "width_GeV": 0.015,
+                    "quarks": "uds",
+                    "charge": 0,
+                    "baryon_number": 1,
+                    "strangeness": -1,
+                    "isospin3": 0,
+                    "decay_products": [
+                        "K̄⁰",
+                        "n"
+                    ],
+                    "g_prod": [
+                        3.2582,
+                        1.7589
+                    ],
+                    "g_dec": [
+                        0.08413382197428096,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Λ*(1520) K⁺",
+                "decay": "Λ*(1520) → K̄⁰ n"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → n π⁺ φ",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "n",
+            "π⁺",
+            "φ"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "n",
+                    "π⁺"
+                ],
+                "spectator": "φ",
+                "resonance": {
+                    "name": "Δ⁺(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "uud",
+                    "charge": 1,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "n",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        0.3842802977207306,
+                        0.6288614602067242
+                    ],
+                    "g_dec": [
+                        0.20840688568279117,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁺(1232) φ",
+                "decay": "Δ⁺(1232) → n π⁺"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → p K̄⁰ K⁰",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K̄⁰",
+            "K⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → p K⁰ K̄⁰",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K⁰",
+            "K̄⁰"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → p K⁺ K⁻",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K⁺",
+            "K⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "K⁻",
+                    "p"
+                ],
+                "spectator": "K⁺",
+                "resonance": {
+                    "name": "Λ*(1520)",
+                    "mass_GeV": 1.518,
+                    "width_GeV": 0.015,
+                    "quarks": "uds",
+                    "charge": 0,
+                    "baryon_number": 1,
+                    "strangeness": -1,
+                    "isospin3": 0,
+                    "decay_products": [
+                        "K⁻",
+                        "p"
+                    ],
+                    "g_prod": [
+                        3.2582,
+                        1.7589
+                    ],
+                    "g_dec": [
+                        0.08413382197428096,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Λ*(1520) K⁺",
+                "decay": "Λ*(1520) → K⁻ p"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → p π⁺ π⁻",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "π⁺",
+            "π⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "p",
+                    "π⁺"
+                ],
+                "spectator": "π⁻",
+                "resonance": {
+                    "name": "Δ⁺⁺(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "uuu",
+                    "charge": 2,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": 1.5,
+                    "decay_products": [
+                        "p",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        0.665593,
+                        1.08922
+                    ],
+                    "g_dec": [
+                        0.33393948553592756,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁺⁺(1232) π⁻",
+                "decay": "Δ⁺⁺(1232) → p π⁺"
+            },
+            {
+                "subsystem": [
+                    "p",
+                    "π⁻"
+                ],
+                "spectator": "π⁺",
+                "resonance": {
+                    "name": "Δ⁰(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "udd",
+                    "charge": 0,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": -0.5,
+                    "decay_products": [
+                        "p",
+                        "π⁻"
+                    ],
+                    "g_prod": [
+                        0.3842802977207306,
+                        0.6288614602067242
+                    ],
+                    "g_dec": [
+                        0.1967967733475323,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁰(1232) π⁺",
+                "decay": "Δ⁰(1232) → p π⁻"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → p φ φ",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "φ",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Δ⁺⁺ K⁰ K⁻",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "Δ⁺⁺",
+            "K⁰",
+            "K⁻"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Λ K⁺ φ",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "Λ",
+            "K⁺",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → Λ π⁺ K⁰",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "Λ",
+            "π⁺",
+            "K⁰"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "K⁰",
+                    "π⁺"
+                ],
+                "spectator": "Λ",
+                "resonance": {
+                    "name": "K*⁺(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "us̄",
+                    "charge": 1,
+                    "baryon_number": 0,
+                    "strangeness": 1,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "K⁰",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        0.22671568097509268,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K*⁺(892) Λ",
+                "decay": "K*⁺(892) → K⁰ π⁺"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → Σ⁺ K⁺ π⁻",
+        "deltaS": 0,
+        "initial": "Λc⁺",
+        "finals": [
+            "Σ⁺",
+            "K⁺",
+            "π⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "K⁺",
+                    "π⁻"
+                ],
+                "spectator": "Σ⁺",
+                "resonance": {
+                    "name": "K*⁰(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "ds̄",
+                    "charge": 0,
+                    "baryon_number": 0,
+                    "strangeness": 1,
+                    "isospin3": -0.5,
+                    "decay_products": [
+                        "K⁺",
+                        "π⁻"
+                    ],
+                    "g_prod": [
+                        -1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        -0.21748563170931545,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K*⁰(892) Σ⁺",
+                "decay": "K*⁰(892) → K⁺ π⁻"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → n K⁺ φ",
+        "deltaS": 1,
+        "initial": "Λc⁺",
+        "finals": [
+            "n",
+            "K⁺",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → n π⁺ K⁰",
+        "deltaS": 1,
+        "initial": "Λc⁺",
+        "finals": [
+            "n",
+            "π⁺",
+            "K⁰"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "n",
+                    "π⁺"
+                ],
+                "spectator": "K⁰",
+                "resonance": {
+                    "name": "Δ⁺(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "uud",
+                    "charge": 1,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "n",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        0.3842802977207306,
+                        0.6288614602067242
+                    ],
+                    "g_dec": [
+                        0.20840688568279117,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁺(1232) K⁰",
+                "decay": "Δ⁺(1232) → n π⁺"
+            },
+            {
+                "subsystem": [
+                    "K⁰",
+                    "π⁺"
+                ],
+                "spectator": "n",
+                "resonance": {
+                    "name": "K*⁺(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "us̄",
+                    "charge": 1,
+                    "baryon_number": 0,
+                    "strangeness": 1,
+                    "isospin3": 0.5,
+                    "decay_products": [
+                        "K⁰",
+                        "π⁺"
+                    ],
+                    "g_prod": [
+                        1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        0.22671568097509268,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K*⁺(892) n",
+                "decay": "K*⁺(892) → K⁰ π⁺"
+            }
+        ]
+    },
+    {
+        "decay": "Λc⁺ → p K⁰ φ",
+        "deltaS": 1,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K⁰",
+            "φ"
+        ],
+        "chains": []
+    },
+    {
+        "decay": "Λc⁺ → p K⁺ π⁻",
+        "deltaS": 1,
+        "initial": "Λc⁺",
+        "finals": [
+            "p",
+            "K⁺",
+            "π⁻"
+        ],
+        "chains": [
+            {
+                "subsystem": [
+                    "p",
+                    "π⁻"
+                ],
+                "spectator": "K⁺",
+                "resonance": {
+                    "name": "Δ⁰(1232)",
+                    "mass_GeV": 1.232,
+                    "width_GeV": 0.117,
+                    "quarks": "udd",
+                    "charge": 0,
+                    "baryon_number": 1,
+                    "strangeness": 0,
+                    "isospin3": -0.5,
+                    "decay_products": [
+                        "p",
+                        "π⁻"
+                    ],
+                    "g_prod": [
+                        0.3842802977207306,
+                        0.6288614602067242
+                    ],
+                    "g_dec": [
+                        0.1967967733475323,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → Δ⁰(1232) K⁺",
+                "decay": "Δ⁰(1232) → p π⁻"
+            },
+            {
+                "subsystem": [
+                    "K⁺",
+                    "π⁻"
+                ],
+                "spectator": "p",
+                "resonance": {
+                    "name": "K*⁰(892)",
+                    "mass_GeV": 0.896,
+                    "width_GeV": 0.047,
+                    "quarks": "ds̄",
+                    "charge": 0,
+                    "baryon_number": 0,
+                    "strangeness": 1,
+                    "isospin3": -0.5,
+                    "decay_products": [
+                        "K⁺",
+                        "π⁻"
+                    ],
+                    "g_prod": [
+                        -1.0,
+                        0.0
+                    ],
+                    "g_dec": [
+                        -0.21748563170931545,
+                        0.0
+                    ]
+                },
+                "production": "Λc⁺ → K*⁰(892) p",
+                "decay": "K*⁰(892) → K⁺ π⁻"
+            }
+        ]
+    }
+]
